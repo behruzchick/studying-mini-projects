@@ -4,7 +4,7 @@ const button = document.querySelector('button').addEventListener('mouseover' ,op
 const dropList = document.querySelector('.drop');
 
 
-
+console.log("ddd");
 
         function openmenu(){
             dropList.classList.remove('displayed')
