@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 110vh;
+    background-color: rgb(4, 4, 47);
+    
+
+}
+.header{
+    width: 100%;
+    height: 100px;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgray;
+    box-shadow: rgba(222, 220, 220, 0.35) 0px 5px 15px;
+}
+
+.back-button{
+    width: 150px;
+    height: 60px;
+    background-color: red;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.back-button:hover{
+    background-color: rgb(144, 14, 14);
+}
+.back-button svg{
+    width: 50px;
+    height: 40px;
+    color: white;
+}
+
+ul{
+    display: flex; 
+    text-decoration: none;
+}
+
+li  {
+    margin-left: 50px;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+    transition: 0.5s;
+}
+a:hover{
+    border-bottom: 1px solid darkgray;
+}
+.main{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.movie-img img {
+    margin-top: 110px;
+    width: 500px;
+    height: 700px;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+    
+}
+.movie-info {
+    color: white;
+    text-align: center;
+    padding: 10px 40px;
+    font-family: 'Bruno Ace', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    flex-direction: column;
+    
+}
+.dowmload{
+    width: 200px;
+    height: 60px;
+    background-color: rgb(12, 243, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-left: 110px;
+    transition: 0.3s;
+
+}
+.dowmload svg{
+    width: 100px;
+    height: 30px;
+    
+}
+.dowmload:hover{
+    background-color:rgb(21, 180, 21);
+}
+.modal{
+    width: 450px;
+    height: 300px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bruno Ace', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    box-shadow: white 0px 6px 12px -2px, white 0px 3px 7px -3px;
+    border-radius: 7px;
+    position: absolute;
+    filter: blur(none);
+    z-index: 9999;
+    transition: 0.4s;
+}
+    
+.header-modal{
+    width: 100%;
+    height: 50px;
+    padding: 40px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.main-modal{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.footer-modal{
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.footer-modal button{
+    font-family: 'Bruno Ace', cursive;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    
+}
+.down{
+    background-color:  rgb(12, 243, 12);
+    transition: 0.3s;
+}
+.cancel{
+    background-color: red;
+}
+
+
+.btn-close{   
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000 ;
+    outline: none;
+    position: relative;
+    right: -85px;
+    top: -20px;
+    border-radius: 7px;
+    transition: 0.3s;
+    
+}
+.modal-cont{
+    position: absolute;
+    top: 400px;
+    left: 730px;
+}
+.filtered{
+    filter: blur(3px);
+}
+.btn-close:hover{
+    background-color: rgb(150, 18, 18);
+}
+.down:hover{
+    background-color:rgb(17, 172, 17) ;
+}
+

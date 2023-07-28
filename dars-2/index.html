@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-image: url("https://img.freepik.com/premium-photo/stock-graph-chart-with-business-candlestick-financial-static-analysis-with-growing-financial_505353-424.jpg");
+            background-repeat: no-repeat;
+            background-size: 120%;
+        }
+
+        .trade-block{
+            margin-left: 100px;
+            width: 50%;
+            height: 500px;
+            border: 30px solid rgb(3, 5, 36);
+            border-radius: 17px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trade-header{
+            width: 100%;
+            height: 70px;
+            background-color: aliceblue;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 100px;
+            color: white;
+            
+        }
+        .trade-header h1 {
+            color: #000;
+        }
+
+        .trade-block h4 {
+            width: 150px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            background-color: rgb(36, 160, 182);
+            cursor: pointer;
+        }
+        .trade-media{
+            width: 100%;
+            height: 310px;
+            background-color: rgb(20, 23, 49);;
+            display: flex;
+            align-items: center;
+            padding: 100px;
+            
+           
+        }
+        .trade-media p {
+            width: 170px;
+            height: 50px;
+            background-color: rgb(14, 233, 14);
+            border-radius: 5px;
+            color: white;
+            font-size: 27px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content:center ;
+        }
+        .trade-header span{
+            margin-left: 12px;
+        }
+
+        .trade-footer{
+            width: 900px;
+            height: 70px;
+            background-color:rgb(216, 220, 222);
+            position: absolute;
+            left: 130px;
+            bottom: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
+        }
+         .buttons button{
+            width: 120px;
+            height: 30px;
+            margin-left: 20px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .buy{
+            background-color: rgb(14, 233, 14);
+        }
+        .sale{
+            background-color: rgb(213, 238, 16);
+        }
+
+        .trade-footer input{
+            border: none;
+            height: 40px;
+            padding: 13px;
+            border-radius: 4px;
+            background-color: rgb(6, 6, 38);
+            color: white;
+        }
+        button:active{
+            background-color: darkgoldenrod;
+        }
+        .line-1{
+            width: 20px;
+            height: 60px;
+            background-color: darkred;
+            position: absolute;
+            bottom: 300px;
+            transition: 2s;
+        }
+        .line-2{
+            width: 20px;
+            height: 80px;
+            background-color: darkred;
+            position: absolute;
+            bottom: 310px;
+            left: 280px;
+            transition: 1s;
+        }
+        .line-3{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 330px;
+            left: 340px;
+            background-color: rgb(146, 146, 16);
+            transition: 0.9s;
+        }
+        .line-4{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 350px;
+            left: 390px;
+            background-color: rgb(157, 157, 22);
+            transition: 0.7s;
+        }
+        .line-5{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 380px;
+            left: 430px;
+            background-color: rgb(236, 236, 17);
+            transition: 0.6s
+        }
+        .line-6{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 380px;
+            left: 480px;
+            background-color: rgb(113, 45, 18);
+            transition: 0.5s;
+        }
+        .line-7{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 420px;
+            left: 540px;
+            background-color: rgb(18, 172, 59);
+            transition: 0.4s
+        }
+        .line-8{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 480px;
+            left: 590px;
+            background-color: rgb(18, 172, 59);
+            transition: 0.3s
+        }
+        .line-9{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 460px;
+            left: 650px;
+            background-color: rgb(160, 184, 6);
+        }
+        .line-10{
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            bottom: 500px;
+            left: 700px;
+            background-color: rgb(18, 172, 59);
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="trade-block">
+                    <div class="trade-header">
+                        <h1>Invest</h1>
+
+                        <h4>Сумма: <span class="summa"></span></h4>
+                    </div>
+                    <div class="trade-media">
+                      
+
+                        
+                           <div class="line-1"></div>
+                           <div class="line-2"></div>
+                           <div class="line-3"></div>
+                           <div class="line-4"></div>
+                           <div class="line-5"></div>
+                           <div class="line-6"></div>
+                           <div class="line-7"></div>
+                           <div class="line-8"></div>
+                           <div class="line-9"></div>
+                           <div class="line-10"></div>
+                           
+                            
+                    </div>
+                    <div class="trade-footer">
+                        <div class="buttons">
+                           <button class="buy">BUY</button>
+                           <button class="sale">RUN</button>
+                        </div>
+                        <input type="number" placeholder="Укажите сумму для остановки" class="max-input">
+                        <input type="number" placeholder="Введите сумму" class="input">
+                    </div>
+
+                    
+            </div>
+        </div>
+
+    <script src="app.js">
+
+
+
+                    
+    </script>
+</body>
+</html>

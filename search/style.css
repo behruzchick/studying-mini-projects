@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search_wrapper{
+    display: flex;
+    align-items: center ;
+}
+input{
+    height: 50px;
+    width: 0px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 9px;
+    transition: 0.5s all;
+
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    position: relative;
+    right: 50px;
+}
+.active{
+    width: 250px;
+    transition: 0.5s all;
+}
